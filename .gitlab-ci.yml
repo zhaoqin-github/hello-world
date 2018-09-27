@@ -1,0 +1,12 @@
+stages:
+  - build
+
+hello:
+  tags:
+    - cm-official-docker-executor
+  stage: build
+  image: centos:7
+  script:
+    - echo $CI_COMMIT_REF_NAME
+    - echo $CI_COMMIT_SHA
+    - echo $CI_COMMIT_MESSAGE
